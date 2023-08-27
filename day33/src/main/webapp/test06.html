@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>블록 요소를 인라인 요소로 변경하기</title>
+<style type="text/css">
+	li {
+		list-style-type: none;
+	}
+	.gnb li {
+		display: inline;
+	}
+	.gnb li a {
+		display: inline-block;
+		background: lightblue;
+		color: red;
+		width: 150px;
+		text-align: center;
+		text-decoration: none;
+		height: 40px;
+		line-height: 40px;
+	}
+	.gnb li a:hover {
+		background: brown;
+		text-decoration: underline;
+	}
+</style>
+</head>
+<body>
+	<ul class="gnb">
+		<li><a href="https://www.naver.com/">전체 상품 목록보기</a></li>
+		<li><a href="https://www.naver.com/">신상품 목록보기</a></li>
+		<li><a href="https://www.naver.com/">BEST 목록보기</a></li>
+		<li><a href="https://www.naver.com/">고객센터 문의하기</a></li>
+	</ul>
+</body>
+</html>
