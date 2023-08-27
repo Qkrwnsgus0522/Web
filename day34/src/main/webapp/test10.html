@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>배열의 활용</title>
+<style type="text/css">
+	div {
+		width: 200px;
+		height: 50px;
+		text-align: center;
+		line-height: 50px;
+	}
+</style>
+</head>
+<body>
+	<script type="text/javascript">
+		var colorDatas = ['MediumSeaGreen', 'Dodgerblue', 'BlueViolet', 'Goldenrod', 'Tomato'];
+		
+		for (var i = 0; i < colorDatas.length; i++) {
+			var elem = '<div style="background-color:' + colorDatas[i] + '">' + colorDatas[i] + '</div>';
+			document.write(elem);
+		}
+	</script>
+</body>
+</html>
