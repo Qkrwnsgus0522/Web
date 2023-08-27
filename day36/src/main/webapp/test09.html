@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>실습</title>
+<style type="text/css">
+	#box {
+		width: 200px;
+		height: 200px;
+		background-color: lightseagreen;
+	}
+	.test {
+		display: none;
+	}
+</style>
+<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		/*
+		$('#wrap button:eq(0)').click(function() {
+			$('#wrap .box').addClass("test");
+		});
+		$('#wrap button:eq(1)').click(function() {
+			$('#wrap .box').removeClass();
+		});
+		$('#wrap button:eq(2)').click(function() {
+			if ($('#wrap .box').attr("class") == 'test') {
+				$('#wrap .box').removeClass();			
+			}
+			else {
+				$('#wrap .box').addClass("test");
+			}
+		});
+		*/
+		$('#wrap button:eq(0)').click(function() {
+			$('#wrap .box').hide();
+		});
+		$('#wrap button:eq(1)').click(function() {
+			$('#wrap .box').show();
+		});
+		$('#wrap button:eq(2)').click(function() {
+			$('#wrap .box').toggle();
+		});
+	});
+</script>
+</head>
+<body>
+	<div id="wrap">
+		<button>버튼1</button>
+		<button>버튼2</button>
+		<button>버튼3</button>
+		<hr>
+		<div class="box"></div>
+	</div>
+</body>
+</html>

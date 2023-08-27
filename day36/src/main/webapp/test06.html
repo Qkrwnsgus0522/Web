@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>갤러리 프로젝트</title>
+<style type="text/css">
+	#wrap {
+		width: 160px;
+	}
+	#wrap .page {
+		text-align: right;
+		margin: 5px;
+	}
+	#wrap .photo {
+		border: 2px solid black;
+		width: 160px;
+		height: 160px;
+		overflow: hidden;
+	}
+</style>
+<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		var total = $('.photo > div').length;
+		var num = 1;
+		$('.pageInfo > span:first').text(num);
+		$('.pageInfo > span:last').text(total);
+		
+		$('.btn1').click(function() {
+			num--;
+			$('.photo div:last').insertBefore('.photo div:first');
+			if (num < 1) {
+				num = total;
+			}
+			$('.pageInfo > span:first').text(num);
+		});
+		$('.btn2').click(function() {
+			num++;
+			$('.photo div:first').insertAfter('.photo div:last');
+			if (num > total) {
+				num = 1;
+			}
+			$('.pageInfo > span:first').text(num);
+		});
+	});
+</script>
+</head>
+<body>
+
+<div id="wrap">
+	<div class="page">
+		<button class="btn1"> &lt; </button>
+		<span class="pageInfo"> <span></span> / <span></span> </span>
+		<button class="btn2"> &gt; </button>
+	</div>
+	<div class="photo">
+		<div><img alt="이미지01" src="images/Galio.png"></div>
+		<div><img alt="이미지02" src="images/Gangplank.png"></div>
+		<div><img alt="이미지03" src="images/Garen.png"></div>
+	</div>
+</div>
+
+</body>
+</html>

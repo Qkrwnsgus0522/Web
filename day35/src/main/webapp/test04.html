@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<button type="button" onclick="test()">id속성값이 check인 목록에 변화주기</button>
+	<br><br>
+	<button type="button" onclick="test2()">class속성값이 check2인 목록에 변화주기</button>
+	
+	<ul>
+		<li class="check2">1번째 목록</li>
+		<li id="check">2번째 목록</li>
+		<li class="check2">3번째 목록</li>
+		<li>4번째 목록</li>
+		<li class="check2">5번째 목록</li>
+	</ul>
+	
+	<script type="text/javascript">
+		function test() {
+			var obj = document.getElementById('check');
+			obj.style.backgroundColor = 'blue';
+		}
+		function test2() {
+			var arr = document.getElementsByClassName('check2');
+			for (var i = 0; i < arr.length; i++) {
+				arr[i].style.backgroundColor = 'gray';				
+			}
+		}
+	</script>
+</body>
+</html>
