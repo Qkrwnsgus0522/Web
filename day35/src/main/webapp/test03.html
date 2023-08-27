@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>마우스 입력 이벤트</title>
+<style type="text/css">
+	#box {
+		width: 50px;
+		height: 50px;
+		background-color: lightgray;
+		cursor: pointer;
+	}
+</style>
+</head>
+<body>
+	<div id="box" onmouseover="test1(this)" onmousedown="test2(this)" onmouseout="test3(this)"></div>
+	
+	<script type="text/javascript">
+		function test1(obj) {
+			obj.style.backgroundColor = 'lightgreen';
+		}
+		function test2(obj) {
+			obj.style.backgroundColor = 'lightpink';
+		}
+		function test3(obj) {
+			obj.style.backgroundColor = 'lightblue';
+		}
+	</script>
+</body>
+</html>

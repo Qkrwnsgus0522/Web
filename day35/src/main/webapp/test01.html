@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>실습 풀이</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		// setTimeout(실행할함수, 얼마나기다릴지);
+		setTimeout(function() {
+			
+			const ans = Math.floor(Math.random() * 100) + 1;
+			console.log('정답 숫자는' + ans + '입니다!');
+			alert('정답 숫자는 ' + ans + '입니다!');
+			
+			var L = 1;
+			var H = 100;
+			var cnt = 0;
+			while (true) {
+				cnt++;
+				var num = parseInt(prompt(L + '~' + H + '까지의 정수중에서 정답을 정수로 입력하세요.'));
+				if (ans == num) {
+					alert('정답입니다! :D');
+					break;
+				}
+				else if (ans < num) {
+					alert('D O W N');
+					H = num - 1;
+				}
+				else {
+					alert('U P');
+					L = num + 1;
+				}			
+			}
+			document.write('<h1>' + cnt + '번만에 맞추셨습니다.</h1>');
+			
+		}, 3000);
+		
+	</script>
+</body>
+</html>

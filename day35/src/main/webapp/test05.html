@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	li {
+		margin: 10px;
+		cursor: pointer;
+		border: 1px solid black;
+	}
+	.click {
+		/* 클릭 이벤트를 통해
+		클래스명이 click이 된 요소가 있다면, */
+		background-color: lightpink !important;
+	}
+</style>
+</head>
+<body>
+	<ul>
+		<li>1번째 목록</li>
+		<li>2번째 목록</li>
+		<li>3번째 목록</li>
+		<li>4번째 목록</li>
+		<li>5번째 목록</li>
+	</ul>
+	<script type="text/javascript">
+		var arr = document.querySelectorAll('li');
+		
+		// 이벤트를 연결할때에
+		// 이벤트 리스너를 등록하는 방식으로 적용할 수 있다!
+		for (var i = 0; i < arr.length; i++) {
+			// arr[i].addEventListener('이벤트명', '함수명');
+			arr[i].addEventListener('mouseover', function(){
+				this.style.backgroundColor = 'lightgray';
+			});
+			
+			arr[i].addEventListener('mouseout', function(){
+				this.style.backgroundColor = 'white';
+			});
+			
+			// 함수를 바로 연결하는 방식
+			// 일반적으로, 사전에 등록해둔 CSS와 연결되게끔 코드를 작성하는편
+			arr[i].onclick = test;
+		}
+		
+		function test() {
+			if (this.className == 'click') {
+				this.className = '';
+			}
+			else {
+				this.className = 'click';
+			}
+		}
+	</script>
+</body>
+</html>
