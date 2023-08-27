@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	div, ul, li {
+		margin: 5px;
+	}
+</style>
+<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#header').css("border", "1px solid black");
+		$('ul > li').css("border", "3px solid green");
+		$('div.gnb').css("border", "3px solid pink");
+		$('li[class="test"]').css("background", "lightblue");
+	});
+</script>
+</head>
+<body>
+
+<div id="header">
+	<div id="Logo">로고</div>
+	<div>공지사항</div>	
+</div>
+
+<div class="gnb">
+	<ul>
+		<li>메뉴 01
+			<ul>
+				<li class="test">하위 메뉴 01</li>
+				<li>하위 메뉴 02</li>
+			</ul>
+		</li>
+		<li>메뉴 02</li>
+		<li>메뉴 03</li>
+		<li>메뉴 04</li>
+	</ul>
+</div>
+
+<div id="footer">푸터</div>
+
+</body>
+</html>

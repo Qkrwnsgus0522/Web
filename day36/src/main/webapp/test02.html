@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>가위바위보</title>
+<style type="text/css">
+	#title {
+		width: 450px;
+		height: 30px;
+		margin: 5px;
+		background-color: lightcoral;
+		cursor: pointer;
+		line-height: 30px;
+		text-align: center;
+	}
+	#content {
+		width: 450px;
+		height: 200px;
+		margin: 5px;
+		background-color: lightgoldenrodyellow;
+	}
+	span, img {
+		margin: 5px;
+	}
+</style>
+</head>
+<body>
+
+<div id="title">게 임 시 작</div>
+<div id="content">
+	<span>COM</span>
+	<img id="com" alt="COM 이미지" src="images/rock.png">
+	<span>ME</span>
+	<img id="me" alt="ME 이미지" src="images/rock.png">
+</div>
+
+<script type="text/javascript">
+	document.querySelector('#title').onclick = function() {
+		if (this.firstChild.nodeValue == '게 임 시 작') {
+			this.firstChild.nodeValue = '결 과 확 인';
+			this.style.backgroundColor = 'lightpink'
+			this.style.color = 'white';
+			play();
+		}
+		else {
+			this.firstChild.nodeValue = '게 임 시 작';
+			this.style.backgroundColor = 'lightcoral'
+			this.style.color = 'black';
+			stop();
+		}
+	};
+	
+	function play() {
+		document.querySelector('#com').src = 'images/가위바위보.gif';
+		document.querySelector('#me').src = 'images/가위바위보.gif';
+	}
+	
+	const imagePath = ['paper', 'scissors', 'rock'];
+	
+	function stop() {
+		var comNum = Math.floor(Math.random() * 3) - 1;
+		console.log(comNum);
+		var meNum = Math.floor(Math.random() * 3) - 1;
+		console.log(meNum);
+		
+		// 바위 = 1, 가위 = 0, 보 = -1
+		document.querySelector('#com').src = 'images/' + imagePath[comNum + 1] + '.png';	
+		document.querySelector('#me').src = 'images/' + imagePath[meNum + 1] + '.png';	
+		
+		setTimeout(function() {
+			if (meNum - comNum == 1 || meNum - comNum == -2) {
+				alert('이김!');
+			}
+			else if (meNum - comNum == 0) {
+				alert('무승부');
+			}
+			else {
+				alert('패배...');
+			}
+		}, 2000);
+		
+	}
+	
+/*	
+	const datas=['rock','scissors','paper'];
+	
+	function stop() {
+		var comNum=Math.floor(Math.random() * 3);
+		var meNum=Math.floor(Math.random() * 3);
+		
+		document.querySelector('#com').src='images/'+datas[comNum]+'.png';
+		document.querySelector('#me').src='images/'+datas[meNum]+'.png';
+		
+		setTimeout(function(){
+			if((comNum+2)%3 == meNum){
+				alert('승리!');
+			}
+			else if(comNum == meNum){
+				alert('무승부');
+			}
+			else{
+				alert('패배...');
+			}
+		},1000);
+	}
+*/
+</script>
+
+</body>
+</html>

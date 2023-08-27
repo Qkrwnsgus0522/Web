@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>마우스 이벤트</title>
+<style type="text/css">
+	.box {
+		background-color: lightgray;
+		padding: 10px;
+	}
+</style>
+<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('.box').mouseover(function() {
+			$('.result').append('<p>마우스오버이벤트발생!</p>');
+		});
+	});
+</script>
+</head>
+<body>
+
+<div class="box">mouseover</div>
+
+<hr>
+
+<div class="result"></div>
+
+</body>
+</html>
