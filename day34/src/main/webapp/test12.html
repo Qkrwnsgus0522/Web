@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>실습2+</title>
+	<style type="text/css">
+		div {
+			width: 200px;
+			height:100px;
+			border: 1px solid black;
+			text-align: center;
+			line-height: 100px;
+			cursor: pointer;
+		}
+	</style>
+	<script type="text/javascript">
+		var colorDatas = ['MediumSeaGreen', 'Dodgerblue', 'BlueViolet', 'Goldenrod', 'Tomato'];
+		
+		function changeColor(obj) {
+			// Math.floor(Math.random() * 랜덤숫자개수) + 처음시작수
+			var randNum = Math.floor(Math.random() * colorDatas.length); // 0 ~ 4
+			obj.style.backgroundColor = colorDatas[randNum];
+			document.querySelector('#test1').innerHTML = colorDatas[randNum];
+			// document.getElementById('box').innerHTML
+		}
+	</script>
+</head>
+<body>
+	<div id="test1" onclick="changeColor(this)"></div>
+	<div id="test2"></div>
+	<script type="text/javascript">
+		var colorDatas = ['MediumSeaGreen', 'Dodgerblue', 'BlueViolet', 'Goldenrod', 'Tomato'];
+	
+		document.querySelector('#test2').onclick=function(){
+			// Math.floor(Math.random() * 랜덤숫자개수) + 처음시작수
+			var randNum = Math.floor(Math.random() * colorDatas.length); // 0 ~ 4
+			this.style.backgroundColor = colorDatas[randNum];
+			document.querySelector('#test2').innerHTML = colorDatas[randNum];
+			// document.getElementById('box').innerHTML
+		};
+	</script>
+</body>
+</html>

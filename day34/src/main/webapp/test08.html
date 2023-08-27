@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>객체</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function Car(name) {
+			this.name = name;
+			this.printInfo = function() { // 무명 함수 -> printInfo 함수
+				console.log('차의 주인은 ' + this.name + '님입니다.');
+			}
+		}
+		
+		var car1 = new Car('홍길동');
+		var car2 = new Car('티모');
+		
+		console.log(car1); // Car {name: '홍길동', printInfo: ƒ}
+		console.log(car2.name); // 티모
+		car2.printInfo(); // 차의 주인은 티모님입니다.
+	</script>
+</body>
+</html>

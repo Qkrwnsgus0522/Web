@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>실습2</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var numDatas = [51, 96, 27, 3, 64];
+		var sum = 0;
+		var avg = 0;
+		for (var i = 0; i < numDatas.length; i++) {
+			sum += numDatas[i];
+		}
+		avg = sum / numDatas.length;
+		document.write('배열: ' + numDatas);
+		document.write('<br>');
+		document.write('합계: ' + sum + ' 평균: ' + avg);
+		
+		var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+		var arrsum = 0;
+		for (var i = 0; i < arr.length; i++) {
+			arr[i] = parseInt(prompt('정수를 입력하세요.'));
+			// ★ 웹에서의 모든 데이터는 문자열 타입으로 주고받아진다!
+			arrsum += arr[i];
+		}
+		console.log(arrsum);
+		console.log(arrsum / arr.length);
+	</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>문제</title>
+	<script type="text/javascript">
+		
+		var randNum = Math.floor(Math.random() * 10) + 1; // 1 ~ 100
+		var i = 1;
+		var input2 = 0;
+		var con = -1;
+		
+		while (true) {
+			var input = parseInt(prompt('숫자를 입력하세요'));
+			if (input != randNum) {
+				if (input < randNum) {
+					if (con == 1 && input <= input2) {
+						alert('UP이라고함');
+					} else {
+						alert('UP');						
+					}
+					input2 = input;
+					con = 1;
+				}
+				else {
+					if (con == 2 && input >= input2) {
+						alert('DOWN이라고함');
+					} else {
+						alert('DOWN');					
+					}
+					input2 = input;
+					con = 2;
+				}
+				i++;
+			} else {
+				break;
+			}
+		}
+		document.write('정답: ' + randNum + ', ' + i + '번만에 맞추셨습니다.');
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

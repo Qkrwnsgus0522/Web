@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>자료형</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var str = "문자열";
+		var num = 15;
+		var flag = true;
+		var arr = [1, 2, 3];
+		
+		console.log('str: ' + str) // str: 문자열
+		console.log('num: ' + num) // num: 15
+		console.log('flag: ' + flag) // flag: true
+		console.log('arr: ' + arr) // arr: 1, 2, 3
+		
+		console.log('');
+		
+		var x = 1 + '100';
+		var y = true + 11;
+		
+		console.log('x: ' + x); // x: 1100
+		console.log('y: ' + y); // y: 12
+		
+		console.log(10 / 0); // Infinity
+		console.log(2 * 'apple'); // NaN
+		console.log(isNaN(113)); // false
+		console.log(isNaN('113')); // false
+		console.log(isNaN('banana')); // true
+		
+		console.log('');
+		
+		var a = null;
+		var b;
+		// var c;
+		console.log('a: ' + a); // a: null
+		console.log('b: ' + b); // b: undefined
+		console.log('c: ' + c); // 오류: Uncaught ReferenceError: c is not defined at test03.html:40:23
+	
+	</script>
+</body>
+</html>
